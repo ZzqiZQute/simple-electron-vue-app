@@ -4,6 +4,7 @@
 </template>
 
 <script>
+const {ipcRenderer} = window.electron
 export default {
   name: "app",
   data() {
@@ -11,6 +12,7 @@ export default {
     };
   },
   mounted() {
+    ipcRenderer;
   }
 };
 </script>

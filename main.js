@@ -22,7 +22,6 @@ function createWindow() {
   else
     mainWindow.loadFile(path.resolve(__dirname, "./frontend/dist/index.html"))
 
-  mainWindow.setMenu(null)
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
@@ -54,5 +53,6 @@ app.on('activate', function () {
   if (mainWindow === null) createWindow()
 })
 
+require('./ipcMessage.js')
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
